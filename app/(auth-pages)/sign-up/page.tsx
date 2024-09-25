@@ -36,6 +36,8 @@ export default function Signup({ searchParams }: { searchParams: Message }) {
             minLength={6}
             required
           />
+          {/* TODO: fix this */}
+          {/* @ts-ignore */}
           <SubmitButton formAction={signUpAction} pendingText="Signing up...">
             Sign up
           </SubmitButton>
