@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { signOutAction } from "@/app/actions";
-import { hasEnvVars } from "@/utils/supabase/check-env-vars";
-import { createClient } from "@/utils/supabase/server";
+import { signOutAction } from "~/app/actions";
+import { hasEnvVars } from "~/utils/supabase/check-env-vars";
+import { createClient } from "~/utils/supabase/server";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 
