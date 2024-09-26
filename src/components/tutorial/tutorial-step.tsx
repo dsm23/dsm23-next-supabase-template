@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Checkbox } from "../ui/checkbox";
 
 export function TutorialStep({
@@ -5,7 +6,7 @@ export function TutorialStep({
   children,
 }: {
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <li className="relative">
