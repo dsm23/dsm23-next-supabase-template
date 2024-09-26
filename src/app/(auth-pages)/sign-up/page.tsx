@@ -19,7 +19,7 @@ export default function Signup({ searchParams }: { searchParams: Message }) {
     <>
       <form className="mx-auto flex min-w-64 max-w-64 flex-col">
         <h1 className="text-2xl font-medium">Sign up</h1>
-        <p className="text text-sm text-foreground">
+        <p className="text-sm text-foreground">
           Already have an account?{" "}
           <Link className="font-medium text-primary underline" href="/sign-in">
             Sign in
@@ -37,7 +37,7 @@ export default function Signup({ searchParams }: { searchParams: Message }) {
             required
           />
           {/* TODO: fix this */}
-          {/* @ts-ignore */}
+          {/* @ts-expect-error unsure how to handle the error return */}
           <SubmitButton formAction={signUpAction} pendingText="Signing up...">
             Sign up
           </SubmitButton>
