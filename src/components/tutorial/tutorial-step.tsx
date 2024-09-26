@@ -13,6 +13,7 @@ export function TutorialStep({
         id={title}
         name={title}
         className={`peer absolute top-[3px] mr-2`}
+        aria-label={title}
       />
       <label
         htmlFor={title}
