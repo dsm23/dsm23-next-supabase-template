@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { signUpAction } from "@/app/actions";
-import { FormMessage, Message } from "@/components/form-message";
-import { SubmitButton } from "@/components/submit-button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { signUpAction } from "~/app/actions";
+import { FormMessage, Message } from "~/components/form-message";
+import { SubmitButton } from "~/components/submit-button";
+import { Input } from "~/components/ui/input";
+import { Label } from "~/components/ui/label";
 import { SmtpMessage } from "../smtp-message";
 
 export default function Signup({ searchParams }: { searchParams: Message }) {
