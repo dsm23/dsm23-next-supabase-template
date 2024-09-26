@@ -4,7 +4,7 @@ import { SubmitButton } from "@/components/submit-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-export default async function ResetPassword({
+export default function ResetPassword({
   searchParams,
 }: {
   searchParams: Message;

@@ -63,7 +63,7 @@ const rawData = JSON.stringify({
 });
 
 // log outputs to the gh actions panel
-console.log(rawData);
+console.info(rawData);
 
 mkdirp.sync(path.join(nextMetaRoot, "analyze/"));
 fs.writeFileSync(

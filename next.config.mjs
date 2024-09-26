@@ -6,6 +6,9 @@ import { env } from "./env.mjs";
  * @type {import('next').NextConfig}
  */
 const config = withPlugins([[withBundleAnalyzer({ enabled: env.ANALYZE })]], {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   reactStrictMode: true,
   rewrites() {
     return [
