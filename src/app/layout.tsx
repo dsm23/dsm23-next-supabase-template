@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { ThemeProvider } from "next-themes";
 import Link from "next/link";
 import DeployButton from "@/components/deploy-button";
@@ -19,11 +20,7 @@ export const metadata = {
   description: "The fastest way to build apps with Next.js and Supabase",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <body className="bg-background text-foreground">
