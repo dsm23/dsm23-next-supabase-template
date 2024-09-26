@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "fmt": "prettier --write .",
-    "fmt.check": "prettier --check ."
+    "fmt.check": "prettier --check .",
+    "playwright": "playwright"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.2.13",
@@ -33,6 +34,7 @@
     "@commitlint/config-conventional": "^19.5.0",
     "@commitlint/types": "^19.5.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "@playwright/test": "^1.47.2",
     "@types/node": "22.7.0",
     "@types/react": "18.3.9",
     "@types/react-dom": "18.3.0",

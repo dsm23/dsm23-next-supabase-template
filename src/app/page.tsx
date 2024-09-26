@@ -8,6 +8,7 @@ export default async function Index() {
     <>
       <Hero />
       <main className="flex flex-1 flex-col gap-6 px-4">
+        <h1 className="sr-only">Delete this</h1>
         <h2 className="mb-4 text-xl font-medium">Next steps</h2>
         {hasEnvVars ? <SignUpUserSteps /> : <ConnectSupabaseSteps />}
       </main>
