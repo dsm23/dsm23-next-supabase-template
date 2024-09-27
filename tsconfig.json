@@ -31,5 +31,5 @@
     "jest.config.mjs",
     "jest.setup.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "volumes"]
 }
