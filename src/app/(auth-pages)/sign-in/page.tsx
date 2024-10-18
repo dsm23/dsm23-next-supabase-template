@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { signInAction } from "~/app/actions";
-import { FormMessage, Message } from "~/components/form-message";
+import { FormMessage } from "~/components/form-message";
 import { SubmitButton } from "~/components/submit-button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
+import type { Message } from "~/components/form-message";
 
 export default async function Login(props: { searchParams: Promise<Message> }) {
   const searchParams = await props.searchParams;
   return (
-    // eslint-disable-next-line @typescript-eslint/no-misused-promises
     <form className="flex min-w-64 flex-1 flex-col" action={signInAction}>
       <h1 className="text-2xl font-medium">Sign in</h1>
       <p className="text-sm text-foreground">

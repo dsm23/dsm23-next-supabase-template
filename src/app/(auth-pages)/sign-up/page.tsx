@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { signUpAction } from "~/app/actions";
-import { FormMessage, Message } from "~/components/form-message";
+import { FormMessage } from "~/components/form-message";
 import { SubmitButton } from "~/components/submit-button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
+import type { Message } from "~/components/form-message";
 import { SmtpMessage } from "../smtp-message";
 
 export default async function Signup(props: {
@@ -22,7 +23,6 @@ export default async function Signup(props: {
     <>
       <form
         className="mx-auto flex min-w-64 max-w-64 flex-col"
-        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         action={signUpAction}
       >
         <h1 className="text-2xl font-medium">Sign up</h1>
