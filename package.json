@@ -1,4 +1,5 @@
 {
+  "name": "dsm23-next-supabase-template",
   "private": true,
   "type": "module",
   "scripts": {
