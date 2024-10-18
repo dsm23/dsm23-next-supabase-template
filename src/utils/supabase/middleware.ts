@@ -29,6 +29,7 @@ export const updateSession = async (request: NextRequest) => {
               request,
             });
             cookiesToSet.forEach(({ name, value, options }) =>
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
               response.cookies.set(name, value, options),
             );
           },

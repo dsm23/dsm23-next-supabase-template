@@ -1,8 +1,9 @@
 import { resetPasswordAction } from "~/app/actions";
-import { FormMessage, Message } from "~/components/form-message";
+import { FormMessage } from "~/components/form-message";
 import { SubmitButton } from "~/components/submit-button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
+import type { Message } from "~/components/form-message";
 
 export default async function ResetPassword(props: {
   searchParams: Promise<Message>;
@@ -11,7 +12,6 @@ export default async function ResetPassword(props: {
   return (
     <form
       className="flex w-full max-w-md flex-col gap-2 p-4 [&>input]:mb-4"
-      // eslint-disable-next-line @typescript-eslint/no-misused-promises
       action={resetPasswordAction}
     >
       <h1 className="text-2xl font-medium">Reset password</h1>
