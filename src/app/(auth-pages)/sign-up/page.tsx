@@ -6,7 +6,10 @@ import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { SmtpMessage } from "../smtp-message";
 
-export default function Signup({ searchParams }: { searchParams: Message }) {
+export default async function Signup(props: {
+  searchParams: Promise<Message>;
+}) {
+  const searchParams = await props.searchParams;
   if ("message" in searchParams) {
     return (
       <div className="flex h-screen w-full flex-1 items-center justify-center gap-2 p-4 sm:max-w-md">
@@ -17,7 +20,11 @@ export default function Signup({ searchParams }: { searchParams: Message }) {
 
   return (
     <>
-      <form className="mx-auto flex min-w-64 max-w-64 flex-col">
+      <form
+        className="mx-auto flex min-w-64 max-w-64 flex-col"
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
+        action={signUpAction}
+      >
         <h1 className="text-2xl font-medium">Sign up</h1>
         <p className="text-sm text-foreground">
           Already have an account?{" "}
@@ -36,11 +43,7 @@ export default function Signup({ searchParams }: { searchParams: Message }) {
             minLength={6}
             required
           />
-          {/* TODO: fix this */}
-          {/* @ts-expect-error unsure how to handle the error return */}
-          <SubmitButton formAction={signUpAction} pendingText="Signing up...">
-            Sign up
-          </SubmitButton>
+          <SubmitButton pendingText="Signing up...">Sign up</SubmitButton>
           <FormMessage message={searchParams} />
         </div>
       </form>
