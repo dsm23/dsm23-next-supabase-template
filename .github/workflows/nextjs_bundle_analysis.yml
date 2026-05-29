@@ -21,7 +21,7 @@ jobs:
   analyze-bundle:
     env:
       SKIP_ENV_VALIDATION: true
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     permissions:
       pull-requests: write
     steps:
