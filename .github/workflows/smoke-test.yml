@@ -14,7 +14,7 @@ env:
 
 jobs:
   smoke-test:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.49.1-noble
     steps:
